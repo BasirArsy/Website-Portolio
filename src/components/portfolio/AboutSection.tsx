@@ -82,6 +82,8 @@ const AboutSection = () => {
                 <Badge variant="secondary">Vue.js</Badge>
                 <Badge variant="secondary">PHP</Badge>
                 <Badge variant="secondary">Javascript</Badge>
+                <Badge variant="secondary">Tailwind</Badge>
+                <Badge variant="secondary">Bootstrap</Badge>
               </div>
             </div>
           </div>
