@@ -64,11 +64,10 @@ const AboutSection = () => {
                 Hi, I'm a Basir Arsy Syams
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                I have a knowledge in both backend and frontend
-                development, enabling me to deliver complete web solutions. My
-                main expertise is in building robust backend systems with
-                Laravel and crafting dynamic, responsive user interfaces using
-                Vue.js.
+                I have a knowledge in both backend and frontend development,
+                enabling me to deliver complete web solutions. My main expertise
+                is in building robust backend systems with Laravel and crafting
+                dynamic, responsive user interfaces using Vue.js.
               </p>
 
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -79,10 +78,10 @@ const AboutSection = () => {
               </p>
 
               <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary">Laravel Expert</Badge>
-                <Badge variant="secondary">Vue.js Specialist</Badge>
-                <Badge variant="secondary">Full Stack</Badge>
-                <Badge variant="secondary">Problem Solver</Badge>
+                <Badge variant="secondary">Laravel</Badge>
+                <Badge variant="secondary">Vue.js</Badge>
+                <Badge variant="secondary">PHP</Badge>
+                <Badge variant="secondary">Javascript</Badge>
               </div>
             </div>
           </div>
