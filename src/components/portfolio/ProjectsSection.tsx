@@ -26,7 +26,7 @@ const ProjectsSection = () => {
         "/assets/consumptionP3K/consumptionP3K1.png",
         "/assets/consumptionP3K/consumptionP3K2.png",
       ],
-      technologies: ["Laravel", "Vue.js", "PHP","MySQL", "Postman"],
+      technologies: ["Laravel", "Vue.js", "PHP", "MySQL", "Postman"],
       company: "PT Cipta Krida Bahari (CKB Group)",
       period: "Juni 2025",
       featured: true,
@@ -79,8 +79,9 @@ const ProjectsSection = () => {
       title: "Inventory Management System",
       description:
         "Participated in the development of the Inventory Management System website's workshop module, used to record and manage production equipment testing results. Successfully designed, developed, and implemented 16 REST APIs to support system integration within two months. Collaborated with team members to ensure API functionality aligned with user requirements and project goals, and ensured performance and reliability standards through thorough testing and debugging.",
-      image: "/assets/magangTelkomsat/magangTel3.png",
+      image: "/assets/magangTelkomsat/sertifikatTelkomsat.jpg",
       images: [
+        "/assets/magangTelkomsat/sertifikatTelkomsat.jpg",
         "/assets/magangTelkomsat/magangTel3.png",
         "/assets/magangTelkomsat/magangTel4.png",
         "/assets/magangTelkomsat/magangTel5.png",
@@ -181,7 +182,7 @@ const ProjectsSection = () => {
                 </div>
                 <CardTitle className="text-xl">{project.title}</CardTitle>
                 <p className="text-sm text-muted-foreground">
-                  {project.company} 
+                  {project.company}
                 </p>
               </CardHeader>
 
