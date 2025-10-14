@@ -54,13 +54,13 @@ const Header = () => {
         </div>
 
         <div className="flex items-center space-x-4">
-          <a href="public\assets\cv.pdf" target="_blank">
+          <a href="\assets\cv.pdf" target="_blank">
             <Button variant="outline" size="sm" className="hidden sm:flex">
               <Download className="w-4 h-4 mr-2" />
               Download CV
             </Button>
           </a>
-          <a href="public/assets/BNSP.pdf" target="_blank">
+          <a href="/assets/BNSP.pdf" target="_blank">
             <Button variant="outline" size="sm" className="hidden sm:flex">
               <Download className="w-4 h-4 mr-2" />
               BNSP

@@ -48,7 +48,7 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-            <a href="public\assets\cv.pdf" target="_blank">
+            <a href="\assets\cv.pdf" target="_blank">
               <Button
                 size="lg"
                 className="shadow-primary hover:shadow-glow transition-all duration-300"
@@ -57,7 +57,7 @@ const HeroSection = () => {
                 Download CV
               </Button>
             </a>
-            <a href="public/assets/BNSP.pdf" target="_blank">
+            <a href="/assets/BNSP.pdf" target="_blank">
               <Button
                 size="sm"
                 className="shadow-primary hover:shadow-glow transition-all duration-300"
