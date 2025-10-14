@@ -21,10 +21,10 @@ const ProjectsSection = () => {
       title: "First Aid Kit Consumption Module",
       description:
         "Developed the First Aid Kit Consumption module, enabling each branch of PT Cipta Krida Bahari to efficiently record and track the usage of first aid kits.",
-      image: "public/assets/consumptionP3K/ConsumptionP3K_1.png", // gambar utama untuk preview
+      image: "/assets/consumptionP3K/consumptionP3K1.png", // gambar utama untuk preview
       images: [
-        "public/assets/consumptionP3K/ConsumptionP3K_1.png",
-        "public/assets/consumptionP3K/ConsumptionP3K_2.png",
+        "/assets/consumptionP3K/consumptionP3K1.png",
+        "/assets/consumptionP3K/consumptionP3K2.png",
       ],
       technologies: ["Laravel", "Vue.js", "PHP","MySQL", "Postman"],
       company: "PT Cipta Krida Bahari (CKB Group)",
@@ -36,11 +36,11 @@ const ProjectsSection = () => {
       title: "First Aid Kit Inspection Module",
       description:
         "Developed the First Aid Kit Inspection module, facilitating monthly inspections to monitor how many first aid kits have been used and the remaining stock in each branch",
-      image: "public/assets/inspectionP3K/inspectionP3K_1.png",
+      image: "/assets/inspectionP3K/inspectionP3K_1.png",
       images: [
-        "public/assets/inspectionP3K/inspectionP3K_1.png",
-        "public/assets/inspectionP3K/inspectionP3K_2.png",
-        "public/assets/inspectionP3K/inspectionP3K_3.png",
+        "/assets/inspectionP3K/inspectionP3K_1.png",
+        "/assets/inspectionP3K/inspectionP3K_2.png",
+        "/assets/inspectionP3K/inspectionP3K_3.png",
       ],
       technologies: ["Laravel", "Vue.js", "PHP", "MySQL", "Postman"],
       company: "PT Cipta Krida Bahari (CKB Group)",
@@ -51,10 +51,10 @@ const ProjectsSection = () => {
       title: "Genset Inspection Module",
       description:
         "Developed the Genset Inspection module, enabling systematic inspections to ensure operational readiness and proper maintenance tracking of generators across branches.",
-      image: "public/assets/inspectionGenset/inspectionGenset_1.png",
+      image: "/assets/inspectionGenset/inspectionGenset_1.png",
       images: [
-        "public/assets/inspectionGenset/inspectionGenset_1.png",
-        "public/assets/inspectionGenset/inspectionGenset_2.png",
+        "/assets/inspectionGenset/inspectionGenset_1.png",
+        "/assets/inspectionGenset/inspectionGenset_2.png",
       ],
       technologies: ["Laravel", "Vue.js", "PHP", "MySQL", "Postman"],
       company: "PT Cipta Krida Bahari (CKB Group)",
@@ -65,10 +65,10 @@ const ProjectsSection = () => {
       title: "Hydrant Pipe Inspection Module",
       description:
         "Developed the Hydrant Pipe Inspection module, supporting regular inspections to ensure fire safety compliance and accurate monitoring of hydrant conditions across branches",
-      image: "public/assets/inspectionHydrant/inspectionHydrant_1.png",
+      image: "/assets/inspectionHydrant/inspectionHydrant_1.png",
       images: [
-        "public/assets/inspectionHydrant/inspectionHydrant_1.png",
-        "public/assets/inspectionHydrant/inspectionHydrant_2.png",
+        "/assets/inspectionHydrant/inspectionHydrant_1.png",
+        "/assets/inspectionHydrant/inspectionHydrant_2.png",
       ],
       technologies: ["Laravel", "Vue.js", "PHP", "MySQL", "Postman"],
       company: "PT Cipta Krida Bahari (CKB Group)",
