@@ -1,0 +1,8 @@
+Pada saat magang di PT. Telkom Satelit Indonesia saya terlibat pada development aplikasi inventory management system berbasis website. Aplikasi tersebut berguna untuk mengelola alat produksi perusahaan. Terdapat dua modul utama pada aplikasi tersebut yaitu modul Workshop dan modul Repair. Saya ditugaskan untuk membantu mentor saya membuat api dan mengelola database pada modul Workshop. Pada modul Workshop ini terdapat halaman proses quality control (qc) yang menampilkan data alat produksi yang perlu dilakukan pengetesan, pengetesan dilakukan oleh teknisi. Kemudian terdapat halaman form pendataan hasil pengetesan, setelah selesai di data maka data akan masuk ke halaman hasil test dan halaman riwayat. Hasil pendataan tersebut juga menghasilkan surat hasil pengujian atau pendataan. Dan terakhir halaman dashboard yang menampilkan summary dari alat produksi.
+
+Hasil pengetesan dan pendataan ada tiga, yaitu OK, NOT OK, dan Progress. Status OK berarti alat produksi tidak ada kerusakan. Status NOT OK berarti terdapat kerusakan pada alat produksi dan akan masuk ke modul Repair. Status Progress berarti alat produksi masih dalam progress pengetesan atau pengujian.
+
+Untuk memudahkan recruitmen dalam memahami apa yang saya kerjakan pada saat magang di PT. Telkom Satelit Indonesia, saya membuatkan website Inventory Management System tsb tetapi dengan menggunakan data dummy dikarenakan dari Telkomsat tidak mengizinkan datanya digunakan atau diperlihatkan.
+
+Berikut link website yang saya kerjakan:
+https://inventory-management-system.deployin.xyz/
