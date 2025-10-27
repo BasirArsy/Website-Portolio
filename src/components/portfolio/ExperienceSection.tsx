@@ -8,7 +8,7 @@ const ExperienceSection = () => {
       title: "Full-Stack Web Developer",
       company: "PT Cipta Krida Bahari (CKB Group)",
       location: "Jakarta, Indonesia",
-      period: "Jun - Sep 2025",
+      period: "Jun - Okt 2025",
       type: "Internship",
       description:
         "Developing comprehensive web application modules to support operational efficiency and safety compliance across company branches using Laravel and Vue.js technologies.",

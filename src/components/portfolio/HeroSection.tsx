@@ -32,14 +32,14 @@ const HeroSection = () => {
             👋 Available for opportunities
           </Badge>
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+        {/*   <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
             Web Developer
           </h1>
 
           <h2 className="text-2xl md:text-3xl font-medium mb-6 text-muted-foreground">
             <span className="text-primary font-semibold">Laravel</span> &{" "}
             <span className="text-primary font-semibold">Vue.js</span>
-          </h2>
+          </h2> */}
 
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
             Passionate web developer with expertise in creating robust backend

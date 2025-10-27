@@ -1,177 +1,126 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Code, Database, Globe, Lightbulb } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Download, ArrowDown } from "lucide-react";
 
 const AboutSection = () => {
-  const highlights = [
-    {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Frontend",
-      description: "Creating responsive and interactive UI.",
-    },
-    {
-      icon: <Database className="w-6 h-6" />,
-      title: "Backend",
-      description:
-        "Experienced in designing API and create database management.",
-    },
-    {
-      icon: <Lightbulb className="w-6 h-6" />,
-      title: "Hard Worker & Adaptable",
-      description:
-        "Workholic, resilient, highly adaptable, and able to thrive under pressure without taking things personally.",
-    },
-    {
-      icon: <Code className="w-6 h-6" />,
-      title: "Debugging",
-      description:
-        "Skilled in identifying, analyzing, and resolving bugs to ensure optimal application performance.",
-    },
-    {
-      icon: <Code className="w-6 h-6" />,
-      title: "AI Enthusiast",
-      description:
-        "Good understanding in utilizing AI technologies to enhance web solutions and productivity.",
-    },
-  ];
+  const scrollToProjects = () => {
+    const element = document.getElementById("projects");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToInternshipExperience = () => {
+    const element = document.getElementById("internshipExperience");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <section id="about" className="py-20 bg-gradient-primary">
+    <section id="about" className="py-20 bg-gradient-primary relative">
       <div className="container mx-auto px-6">
+        {/* Header */}
         <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4">
-            About Me
+          <Badge variant="outline" className="mb-6 px-4 py-2 text-sm">
+            👋 Available for opportunities
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Turning Ideas Into{" "}
-            <span className="text-primary">Digital Reality</span>
-          </h2>
-          {/* <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            I'm a passionate web developer who loves creating efficient, and
-            user-friendly web applications
-          </p> */}
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
-          <div className="space-y-6">
+        {/* Main Content */}
+        <div className="max-w-2xl mx-auto">
+          <div className="space-y-8 text-center">
+            {/* Profile Image */}
             <div className="animate-fade-up">
               <img
-                src="/assets/profile.jpg" // gunakan slash untuk path public
+                src="/assets/profile.jpg"
                 alt="Basir Arsy Syams"
-                className="w-40 h-40 rounded-full mx-auto mb-4 shadow-lg object-cover"
+                className="w-40 h-40 rounded-full mx-auto shadow-lg object-cover"
               />
-              <h3 className="text-2xl font-semibold mb-4">
-                Hi, I'm a Basir Arsy Syams
-              </h3>
-              <p className="text-muted-foreground leading-relaxed mb-6">
+            </div>
+
+            {/* Title and Description */}
+            <div className="space-y-4">
+              <h2 className="text-4xl md:text-5xl font-bold">
+                Hi, I'm <span className="text-primary">Basir Arsy Syams</span>
+              </h2>
+
+              <p className="text-muted-foreground leading-relaxed text-lg">
                 I have a knowledge in both backend and frontend development,
                 enabling me to deliver complete web solutions. My main expertise
                 is in building robust backend systems with Laravel and crafting
                 dynamic, responsive user interfaces using Vue.js.
               </p>
 
-              <p className="text-muted-foreground leading-relaxed mb-6">
+              <p className="text-muted-foreground leading-relaxed text-lg">
                 I am dedicated to writing clean, maintainable code and
                 continuously learning the latest technologies in web
                 development. Every project is a chance to grow, innovate, and
                 deliver outstanding results for clients and users.
               </p>
+            </div>
 
-              <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary">Laravel</Badge>
-                <Badge variant="secondary">Vue.js</Badge>
-                <Badge variant="secondary">PHP</Badge>
-                <Badge variant="secondary">Javascript</Badge>
-                <Badge variant="secondary">Tailwind</Badge>
-                <Badge variant="secondary">Bootstrap</Badge>
-              </div>
+            {/* Skills Badges */}
+            <div className="flex flex-wrap gap-2 justify-center">
+              <Badge variant="secondary">Laravel</Badge>
+              <Badge variant="secondary">Vue.js</Badge>
+              <Badge variant="secondary">PHP</Badge>
+              <Badge variant="secondary">Javascript</Badge>
+              <Badge variant="secondary">Tailwind</Badge>
+              <Badge variant="secondary">Bootstrap</Badge>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
+              <a href="/assets/cv.pdf" target="_blank" rel="noopener noreferrer">
+                <Button
+                  size="lg"
+                  className="shadow-primary hover:shadow-glow transition-all duration-300"
+                >
+                  <Download className="w-5 h-5 mr-2" />
+                  Download CV
+                </Button>
+              </a>
+
+              <a href="/assets/BNSP.pdf" target="_blank" rel="noopener noreferrer">
+                <Button
+                  size="lg"
+                  className="shadow-primary hover:shadow-glow transition-all duration-300"
+                >
+                  <Download className="w-5 h-5 mr-2" />
+                  Download BNSP
+                </Button>
+              </a>
+            </div>
+
+            {/* Navigation Buttons */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={scrollToInternshipExperience}
+                className="hover:bg-primary/10 hover:border-primary transition-all duration-300"
+              >
+                View Experience
+                <ArrowDown className="w-5 h-5 ml-2" />
+              </Button>
+
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={scrollToProjects}
+                className="hover:bg-primary/10 hover:border-primary transition-all duration-300"
+              >
+                View Projects
+                <ArrowDown className="w-5 h-5 ml-2" />
+              </Button>
             </div>
           </div>
+        </div>
 
-          {/* Highlights Grid */}
-          <div
-            className="
-              grid
-              grid-cols-2
-              grid-rows-3
-              gap-6
-              md:[grid-template-areas:'a_b''c_c''d_e']
-              [grid-template-areas:'a_b''c_c''d_e']
-            "
-            style={{
-              gridTemplateAreas: `
-                "a b"
-                "c c"
-                "d e"
-              `,
-            }}
-          >
-            <div style={{ gridArea: "a" }}>
-              <Card className="bg-gradient-card border-border/50 hover:shadow-card transition-all duration-300 hover:scale-105">
-                <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4 text-primary">
-                    {highlights[0].icon}
-                  </div>
-                  <h4 className="font-semibold mb-2">{highlights[0].title}</h4>
-                  <p className="text-sm text-muted-foreground">
-                    {highlights[0].description}
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-            <div style={{ gridArea: "b" }}>
-              <Card className="bg-gradient-card border-border/50 hover:shadow-card transition-all duration-300 hover:scale-105">
-                <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4 text-primary">
-                    {highlights[1].icon}
-                  </div>
-                  <h4 className="font-semibold mb-2">{highlights[1].title}</h4>
-                  <p className="text-sm text-muted-foreground">
-                    {highlights[1].description}
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-            <div style={{ gridArea: "c" }}>
-              <Card className="bg-gradient-card border-border/50 hover:shadow-card transition-all duration-300 hover:scale-105">
-                <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4 text-primary">
-                    {highlights[2].icon}
-                  </div>
-                  <h4 className="font-semibold mb-2">{highlights[2].title}</h4>
-                  <p className="text-sm text-muted-foreground">
-                    {highlights[2].description}
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-            <div style={{ gridArea: "d" }}>
-              <Card className="bg-gradient-card border-border/50 hover:shadow-card transition-all duration-300 hover:scale-105">
-                <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4 text-primary">
-                    {highlights[3].icon}
-                  </div>
-                  <h4 className="font-semibold mb-2">{highlights[3].title}</h4>
-                  <p className="text-sm text-muted-foreground">
-                    {highlights[3].description}
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-            <div style={{ gridArea: "e" }}>
-              <Card className="bg-gradient-card border-border/50 hover:shadow-card transition-all duration-300 hover:scale-105">
-                <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4 text-primary">
-                    {highlights[4].icon}
-                  </div>
-                  <h4 className="font-semibold mb-2">{highlights[4].title}</h4>
-                  <p className="text-sm text-muted-foreground">
-                    {highlights[4].description}
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
+        {/* Animated Arrow Down */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <ArrowDown className="w-6 h-6 text-muted-foreground" />
         </div>
       </div>
     </section>
