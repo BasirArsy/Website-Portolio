@@ -46,17 +46,17 @@ const AboutSection = () => {
               </h2>
 
               <p className="text-muted-foreground leading-relaxed text-lg">
-                I have a knowledge in both backend and frontend development,
-                enabling me to deliver complete web solutions. My main expertise
-                is in building robust backend systems with Laravel and crafting
-                dynamic, responsive user interfaces using Vue.js.
+                I am a fresh graduate with a background in Information
+                Technology. I have experience in developing web-based systems.
+                This experience has sharpened my problem-solving skills,
+                programming logic, and resilience.
               </p>
 
               <p className="text-muted-foreground leading-relaxed text-lg">
-                I am dedicated to writing clean, maintainable code and
-                continuously learning the latest technologies in web
-                development. Every project is a chance to grow, innovate, and
-                deliver outstanding results for clients and users.
+                If you are looking for a fresh graduate with strong
+                problem-solving abilities, solid logical thinking, and quick to
+                adaptability to new technologies, I am eager to contribute to
+                your team.
               </p>
             </div>
 
@@ -72,7 +72,11 @@ const AboutSection = () => {
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
-              <a href="/assets/cv.pdf" target="_blank" rel="noopener noreferrer">
+              <a
+                href="/assets/cv.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   size="lg"
                   className="shadow-primary hover:shadow-glow transition-all duration-300"
@@ -82,7 +86,11 @@ const AboutSection = () => {
                 </Button>
               </a>
 
-              <a href="/assets/BNSP.pdf" target="_blank" rel="noopener noreferrer">
+              <a
+                href="/assets/BNSP.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   size="lg"
                   className="shadow-primary hover:shadow-glow transition-all duration-300"
