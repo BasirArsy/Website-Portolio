@@ -47,15 +47,16 @@ const AboutSection = () => {
 
               <p className="text-muted-foreground leading-relaxed text-lg">
                 I am a fresh graduate with a background in Information
-                Technology. I have experience in developing web-based systems.
-                This experience has sharpened my problem-solving skills,
-                programming logic, and resilience.
+                Technology and hold a Bachelor of Applied Computer Science
+                degree. I have experience in developing web-based systems. This
+                experience has honed my problem-solving abilities, programming
+                logic, and resilience.
               </p>
 
               <p className="text-muted-foreground leading-relaxed text-lg">
                 If you are looking for a fresh graduate with strong
-                problem-solving abilities, solid logical thinking, and quick to
-                adaptability to new technologies, I am eager to contribute to
+                problem-solving capabilities, solid logical thinking, and quick
+                adaptability to new technologies, I am ready to contribute to
                 your team.
               </p>
             </div>
