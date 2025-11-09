@@ -55,6 +55,8 @@ const ProjectsSection = () => {
       images: [
         "/assets/inspectionGenset/inspectionGenset_1.png",
         "/assets/inspectionGenset/inspectionGenset_2.png",
+        "/assets/inspectionGenset/inspectionGenset_3.png",
+        "/assets/inspectionGenset/inspectionGenset_4.png",
       ],
       technologies: ["Laravel", "Vue.js", "PHP", "MySQL", "Postman"],
       company: "PT Cipta Krida Bahari (CKB Group)",
