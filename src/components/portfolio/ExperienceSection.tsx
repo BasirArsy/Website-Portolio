@@ -4,7 +4,7 @@ import { Calendar, MapPin, Building } from "lucide-react";
 
 const ExperienceSection = () => {
   const experiences = [
-     {
+    {
       title: "Software Engineer & Data Engineer",
       company: "PT Sinergi Informatika Semen Indonesia",
       location: "Jakarta, Indonesia",
@@ -14,7 +14,7 @@ const ExperienceSection = () => {
         "Developing comprehensive web application modules to support operational efficiency and safety compliance across company branches using Laravel and Vue.js technologies.",
       achievements: [
         "Designed and developed a Data Validation and Correction System as a solo developer, a web-based application used to validate and correct data in a datamart environment.",
-        "Designed and implemented ETL pipelines across three core modules using Python and Apache Airflow, ensuring data accuracy, consistency, and reliability.",
+        "Developed ETL pipelines across three core modules using Python and Apache Airflow, ensuring data accuracy, consistency, and reliability.",
       ],
       technologies: ["Laravel", "React.js", "Python", "Apache Airflow", "Postgresql"],
     },
