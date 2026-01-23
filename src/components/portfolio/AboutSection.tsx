@@ -42,7 +42,7 @@ const AboutSection = () => {
             {/* Title and Description */}
             <div className="space-y-4">
               <h2 className="text-4xl md:text-5xl font-bold">
-                Hi, I'm <span className="text-primary">Basir Arsy Syams</span>
+                Hi, I'm <span className="text-primary">Basir Arsy Syams Testing</span>
               </h2>
 
               <p className="text-muted-foreground leading-relaxed text-lg">
