@@ -8,7 +8,7 @@ const ExperienceSection = () => {
       title: "Software Engineer & Data Engineer",
       company: "PT Sinergi Informatika Semen Indonesia",
       location: "Jakarta, Indonesia",
-      period: "Nov 2 - May 2026",
+      period: "Nov 2025 - May 2026",
       type: "Internship",
       description:
         "Developing comprehensive web application modules to support operational efficiency and safety compliance across company branches using Laravel and Vue.js technologies.",
