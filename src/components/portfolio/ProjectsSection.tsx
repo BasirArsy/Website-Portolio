@@ -110,6 +110,20 @@ const ProjectsSection = () => {
       featured: true,
       category: "Internship Project",
     },
+    {
+      title: "Data Validation & Correction System",
+      description:
+        "This application enables teams from each module to view data that has been loaded into the datamart and identify data that requires correction. Through this system, original source data is separated from user-corrected data, ensuring data integrity and simplifying the audit process.",
+      image: "/assets/sisi/csa_1.png",
+      images: [
+        "/assets/sisi/csa_1.png",
+        "/assets/sisi/csa_2.png",
+      ],
+      technologies: ["Laravel", "React", "PostgreSQL"],
+      company: "PT Sinergi Informatika Semen Indonesia",
+      featured: true,
+      category: "Internship Project",
+    },
   ];
 
   const featuredProjects = projects.filter((project) => project.featured);
@@ -244,9 +258,8 @@ const ProjectsSection = () => {
               <div className="relative">
                 <img
                   src={selectedProject.images[currentImageIndex]}
-                  alt={`${selectedProject.title} - Screenshot ${
-                    currentImageIndex + 1
-                  }`}
+                  alt={`${selectedProject.title} - Screenshot ${currentImageIndex + 1
+                    }`}
                   className="w-full h-96 object-contain bg-gray-100"
                 />
 
@@ -287,11 +300,10 @@ const ProjectsSection = () => {
                         key={index}
                         src={image}
                         alt={`Thumbnail ${index + 1}`}
-                        className={`w-16 h-16 object-cover rounded cursor-pointer flex-shrink-0 ${
-                          index === currentImageIndex
-                            ? "ring-2 ring-primary"
-                            : "opacity-70"
-                        }`}
+                        className={`w-16 h-16 object-cover rounded cursor-pointer flex-shrink-0 ${index === currentImageIndex
+                          ? "ring-2 ring-primary"
+                          : "opacity-70"
+                          }`}
                         onClick={() => setCurrentImageIndex(index)}
                       />
                     ))}

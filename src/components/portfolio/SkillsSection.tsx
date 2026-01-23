@@ -18,7 +18,7 @@ const SkillsSection = () => {
           name: "MySQL",
         },
         {
-          name: "RESTful APIs",
+          name: "PostgreSQL",
         },
       ],
     },
@@ -26,18 +26,8 @@ const SkillsSection = () => {
       title: "Frontend Development",
       icon: "🎨",
       skills: [
-        {
-          name: "Vue.js",
-        },
-        {
-          name: "JavaScript",
-        },
-        {
-          name: "HTML/CSS",
-        },
-        {
-          name: "Tailwind CSS",
-        },
+        { name: "React.js" },
+        { name: "Vuejs" },
       ],
     },
     {
@@ -48,6 +38,7 @@ const SkillsSection = () => {
         { name: "Postman" },
         { name: "GIT" },
         { name: "DBeaver" },
+        { name: "Apache Airflow" },
       ],
     },
   ];
