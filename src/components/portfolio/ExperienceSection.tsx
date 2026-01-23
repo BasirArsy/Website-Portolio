@@ -27,10 +27,10 @@ const ExperienceSection = () => {
       description:
         "Developing comprehensive web application modules to support operational efficiency and safety compliance across company branches using Laravel and Vue.js technologies.",
       achievements: [
-        " Developed the First Aid Kit Consumption module using Laravel and Vue.js, enabling each branch of PT Cipta Krida Bahari to efficiently record and track the usage of first aid kits",
-        "Developed the Genset Inspection module using Laravel and Vue.js, enabling systematic inspections to ensure operational readiness and propermaintenance tracking of generators across branches.",
-        "Developed the First Aid Kit Inspection module using Laravel and Vue.js, facilitating monthly inspections to monitor how many first aid kits have been used and the remaining stock in each branch.",
-        "Developed the Hydrant Pipe Inspection module using Laravel and Vue.js, supporting regular inspections to ensure fire safety compliance andaccurate monitoring of hydrant conditions across branches.",
+        "Developed the “First Aid Kit Consumption” module, enabling each branch of PT Cipta Krida Bahari to efficiently record and track daily first aid kit usage.",
+        "Developed the “Genset Inspection” module, enabling systematic monthly inspections to ensure operational readiness and proper maintenance tracking of generators across branches.",
+        "Developed the “First Aid Kit Inspection” module, facilitating monthly inspections to monitor usage trends, identify consumed first aid kits, and track the remaining stock in each branch.",
+        "Developed the “Hydrant Pipe Inspection” module, supporting regular monthly inspections",
       ],
       technologies: ["Laravel", "Vue.js", "PHP", "JavaScript", "MySQL"],
     },

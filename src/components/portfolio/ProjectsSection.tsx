@@ -18,6 +18,20 @@ const ProjectsSection = () => {
 
   const projects = [
     {
+      title: "Data Validation & Correction System",
+      description:
+        "This application enables teams from each module to view data that has been loaded into the datamart and identify data that requires correction. Through this system, original source data is separated from user-corrected data, ensuring data integrity and simplifying the audit process.",
+      image: "/assets/sisi/csa_1.png",
+      images: [
+        "/assets/sisi/csa_1.png",
+        "/assets/sisi/csa_2.png",
+      ],
+      technologies: ["Laravel", "React", "PostgreSQL"],
+      company: "PT Sinergi Informatika Semen Indonesia",
+      featured: true,
+      category: "Internship Project",
+    },
+    {
       title: "First Aid Kit Consumption Module",
       description:
         "Developed the First Aid Kit Consumption module, enabling each branch of PT Cipta Krida Bahari to efficiently record and track the usage of first aid kits.",
@@ -110,20 +124,7 @@ const ProjectsSection = () => {
       featured: true,
       category: "Internship Project",
     },
-    {
-      title: "Data Validation & Correction System",
-      description:
-        "This application enables teams from each module to view data that has been loaded into the datamart and identify data that requires correction. Through this system, original source data is separated from user-corrected data, ensuring data integrity and simplifying the audit process.",
-      image: "/assets/sisi/csa_1.png",
-      images: [
-        "/assets/sisi/csa_1.png",
-        "/assets/sisi/csa_2.png",
-      ],
-      technologies: ["Laravel", "React", "PostgreSQL"],
-      company: "PT Sinergi Informatika Semen Indonesia",
-      featured: true,
-      category: "Internship Project",
-    },
+
   ];
 
   const featuredProjects = projects.filter((project) => project.featured);
