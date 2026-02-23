@@ -1,4 +1,3 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, Building } from "lucide-react";
 
@@ -10,10 +9,8 @@ const ExperienceSection = () => {
       location: "Jakarta, Indonesia",
       period: "Nov 2025 - May 2026",
       type: "Internship",
-      description:
-        "Developing comprehensive web application modules to support operational efficiency and safety compliance across company branches using Laravel and Vue.js technologies.",
       achievements: [
-        "Designed and developed a Data Validation and Correction System as a solo developer, a web-based application used to validate and correct data in a datamart environment.",
+        "Designed and developed a Data Validation System as a solo developer, a web-based application used to validate and correct data in a datamart environment.",
         "Developed ETL pipelines across three core modules using Python and Apache Airflow, ensuring data accuracy, consistency, and reliability.",
       ],
       technologies: ["Laravel", "React.js", "Python", "Apache Airflow", "Postgresql"],
@@ -24,13 +21,11 @@ const ExperienceSection = () => {
       location: "Jakarta, Indonesia",
       period: "Jun - Oct 2025",
       type: "Internship",
-      description:
-        "Developing comprehensive web application modules to support operational efficiency and safety compliance across company branches using Laravel and Vue.js technologies.",
       achievements: [
-        "Developed the “First Aid Kit Consumption” module, enabling each branch of PT Cipta Krida Bahari to efficiently record and track daily first aid kit usage.",
-        "Developed the “Genset Inspection” module, enabling systematic monthly inspections to ensure operational readiness and proper maintenance tracking of generators across branches.",
-        "Developed the “First Aid Kit Inspection” module, facilitating monthly inspections to monitor usage trends, identify consumed first aid kits, and track the remaining stock in each branch.",
-        "Developed the “Hydrant Pipe Inspection” module, supporting regular monthly inspections",
+        "Developed the First Aid Kit Consumption module, enabling each branch to efficiently record and track daily first aid kit usage.",
+        "Developed the Genset Inspection module, enabling systematic monthly inspections to ensure operational readiness and maintenance tracking.",
+        "Developed the First Aid Kit Inspection module, facilitating monthly inspections to monitor usage trends and track remaining stock.",
+        "Developed the Hydrant Pipe Inspection module, supporting regular monthly inspections.",
       ],
       technologies: ["Laravel", "Vue.js", "PHP", "JavaScript", "MySQL"],
     },
@@ -40,8 +35,6 @@ const ExperienceSection = () => {
       location: "Bogor, Indonesia",
       period: "Jul - Nov 2024",
       type: "Internship",
-      description:
-        "Participated in the development of an Inventory Management System website's workshop module, focusing on backend API development and system integration.",
       achievements: [
         "Successfully designed, developed, and implemented 16 REST APIs to support system integration during two months",
         "Collaborated with team members to ensure API functionality aligned with user requirements and project goals",
@@ -53,103 +46,96 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section id="internshipExperience" className="py-20 bg-background">
+    <section id="internshipExperience" className="section-padding bg-white">
       <div className="container mx-auto px-6">
+        {/* Section Header */}
         <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4">
+          <p className="text-sm font-medium tracking-widest uppercase text-primary mb-3">
             Career Journey
-          </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-primary">Experience</span>
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">
+            Experience
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <div className="w-12 h-[2px] bg-primary mx-auto mt-4" />
+          <p className="text-muted-foreground mt-6 max-w-lg mx-auto">
             My internship journey as a web developer, gaining hands-on
             experience in both full-stack and backend development
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        {/* Timeline */}
+        <div className="max-w-3xl mx-auto">
           <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-border hidden md:block"></div>
+            {/* Vertical line */}
+            <div className="absolute left-[19px] top-2 bottom-2 w-px bg-border hidden md:block" />
 
-            <div className="space-y-8">
+            <div className="space-y-10">
               {experiences.map((experience, index) => (
-                <div key={index} className="relative">
+                <div key={index} className="relative group">
                   {/* Timeline dot */}
-                  <div className="absolute left-6 w-4 h-4 bg-primary rounded-full border-4 border-background hidden md:block"></div>
+                  <div className="absolute left-[14px] top-2 w-[12px] h-[12px] rounded-full border-2 border-primary bg-white hidden md:block group-hover:bg-primary transition-colors duration-300" />
 
-                  <Card className="md:ml-16 bg-gradient-card border-border/50 hover:shadow-card transition-all duration-300">
-                    <CardHeader>
-                      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                  <div className="md:ml-14">
+                    <div className="bg-white border border-border/60 rounded-xl p-6 hover:shadow-md hover:border-border transition-all duration-300">
+                      {/* Header */}
+                      <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-4">
                         <div>
-                          <div className="flex items-center gap-3 mb-2">
-                            <CardTitle className="text-xl">
+                          <div className="flex items-center gap-2.5 mb-1.5 flex-wrap">
+                            <h3 className="text-lg font-semibold text-foreground">
                               {experience.title}
-                            </CardTitle>
-                            <Badge className="bg-blue-900 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            </h3>
+                            <Badge className="bg-primary/10 text-primary border-0 text-[10px] uppercase tracking-wider font-medium px-2 py-0.5">
                               {experience.type}
                             </Badge>
                           </div>
-                          <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-muted-foreground">
-                            <div className="flex items-center gap-2">
-                              <Building className="w-4 h-4" />
-                              <span className="font-medium">
-                                {experience.company}
-                              </span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                              <MapPin className="w-4 h-4" />
-                              <span>{experience.location}</span>
-                            </div>
+                          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground">
+                            <span className="flex items-center gap-1.5">
+                              <Building className="w-3.5 h-3.5" />
+                              {experience.company}
+                            </span>
+                            <span className="flex items-center gap-1.5">
+                              <MapPin className="w-3.5 h-3.5" />
+                              {experience.location}
+                            </span>
                           </div>
                         </div>
-                        <div className="flex flex-col items-start md:items-end gap-2">
-                          <div className="flex items-center gap-2 text-muted-foreground">
-                            <Calendar className="w-4 h-4" />
-                            <span>{experience.period}</span>
-                          </div>
-                        </div>
+                        <span className="flex items-center gap-1.5 text-sm text-muted-foreground whitespace-nowrap">
+                          <Calendar className="w-3.5 h-3.5" />
+                          {experience.period}
+                        </span>
                       </div>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="mb-6">
-                        <h4 className="font-semibold mb-3">
-                          Key Achievements:
+
+                      {/* Achievements */}
+                      <div className="mb-5">
+                        <h4 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">
+                          Key Achievements
                         </h4>
                         <ul className="space-y-2">
-                          {experience.achievements.map(
-                            (achievement, achievementIndex) => (
-                              <li
-                                key={achievementIndex}
-                                className="flex items-start gap-2 text-muted-foreground"
-                              >
-                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                                <span>{achievement}</span>
-                              </li>
-                            )
-                          )}
+                          {experience.achievements.map((achievement, i) => (
+                            <li
+                              key={i}
+                              className="flex items-start gap-2.5 text-sm text-muted-foreground leading-relaxed"
+                            >
+                              <div className="w-1 h-1 bg-primary rounded-full mt-2 flex-shrink-0" />
+                              <span>{achievement}</span>
+                            </li>
+                          ))}
                         </ul>
                       </div>
 
-                      <div>
-                        <h4 className="font-semibold mb-3">
-                          Technologies Used:
-                        </h4>
-                        <div className="flex flex-wrap gap-2">
-                          {experience.technologies.map((tech, techIndex) => (
-                            <Badge
-                              key={techIndex}
-                              variant="outline"
-                              className="text-xs"
-                            >
-                              {tech}
-                            </Badge>
-                          ))}
-                        </div>
+                      {/* Technologies */}
+                      <div className="flex flex-wrap gap-1.5">
+                        {experience.technologies.map((tech, i) => (
+                          <span
+                            key={i}
+                            className="px-2.5 py-0.5 text-[11px] font-medium rounded-full bg-slate-50 text-slate-500 border border-slate-200/80"
+                          >
+                            {tech}
+                          </span>
+                        ))}
                       </div>
-                    </CardContent>
-                  </Card>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>

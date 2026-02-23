@@ -1,84 +1,89 @@
 import { Button } from "@/components/ui/button";
-import { Download, Github, Linkedin, Mail } from "lucide-react";
+import { Download, Linkedin, Mail, Menu, X } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+    setIsMobileMenuOpen(false);
   };
 
-  return (
-    <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <div className="text-xl font-bold text-primary">Portfolio</div>
+  const navItems = [
+    { label: "About", id: "about" },
+    { label: "Experience", id: "internshipExperience" },
+    { label: "Projects", id: "projects" },
+    { label: "Skills", id: "skills" },
+    { label: "Contact", id: "contact" },
+  ];
 
-        <div className="hidden md:flex items-center space-x-8">
-          <button
-            onClick={() => scrollToSection("home")}
-            className="text-foreground hover:text-primary transition-colors"
-          >
-            Home
-          </button>
-          <button
-            onClick={() => scrollToSection("about")}
-            className="text-foreground hover:text-primary transition-colors"
-          >
-            About
-          </button>
-          <button
-            onClick={() => scrollToSection("internshipExperience")}
-            className="text-foreground hover:text-primary transition-colors"
-          >
-            Experience
-          </button>
-          <button
-            onClick={() => scrollToSection("projects")}
-            className="text-foreground hover:text-primary transition-colors"
-          >
-            Projects
-          </button>
-          <button
-            onClick={() => scrollToSection("skills")}
-            className="text-foreground hover:text-primary transition-colors"
-          >
-            Skills
-          </button>
-          <button
-            onClick={() => scrollToSection("contact")}
-            className="text-foreground hover:text-primary transition-colors"
-          >
-            Contact
-          </button>
+  return (
+    <header
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-white/90 backdrop-blur-md shadow-sm border-b border-border/50"
+          : "bg-transparent"
+      }`}
+    >
+      <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <button
+          onClick={() => scrollToSection("about")}
+          className="text-lg font-semibold tracking-tight text-foreground hover:text-primary transition-colors"
+        >
+          Basir Arsy<span className="text-primary">.</span>
+        </button>
+
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center gap-8">
+          {navItems.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[1.5px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+            >
+              {item.label}
+            </button>
+          ))}
         </div>
 
-        <div className="flex items-center space-x-4">
-          <a href="\assets\cv.pdf" target="_blank">
-            <Button variant="outline" size="sm" className="hidden sm:flex">
-              <Download className="w-4 h-4 mr-2" />
-              Download CV
+        <div className="hidden md:flex items-center gap-3">
+          <a href="/assets/cv.pdf" target="_blank" rel="noopener noreferrer">
+            <Button
+              variant="outline"
+              size="sm"
+              className="text-xs font-medium rounded-full px-4 border-border hover:border-primary hover:text-primary transition-all"
+            >
+              <Download className="w-3.5 h-3.5 mr-1.5" />
+              CV
             </Button>
           </a>
-          <a href="/assets/BNSP.pdf" target="_blank">
-            <Button variant="outline" size="sm" className="hidden sm:flex">
-              <Download className="w-4 h-4 mr-2" />
-              BNSP
-            </Button>
-          </a>
-          <div className="flex items-center space-x-2">
-            {/* <Button variant="ghost" size="icon" className="w-8 h-8">
-              <Github className="w-4 h-4" />
-            </Button> */}
+          <div className="flex items-center gap-1 ml-1">
             <a
               href="https://wa.me/6282249919354"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant="ghost" size="icon" className="w-8 h-8">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="w-8 h-8 text-muted-foreground hover:text-primary"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-5 h-5"
+                  className="w-4 h-4"
                   viewBox="0 0 32 32"
                   fill="currentColor"
                 >
@@ -86,22 +91,78 @@ const Header = () => {
                 </svg>
               </Button>
             </a>
-            <a href="https://www.linkedin.com/in/basrarsy/" target="_blank">
-              <Button variant="ghost" size="icon" className="w-8 h-8">
+            <a
+              href="https://www.linkedin.com/in/basrarsy/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="ghost"
+                size="icon"
+                className="w-8 h-8 text-muted-foreground hover:text-primary"
+              >
                 <Linkedin className="w-4 h-4" />
               </Button>
             </a>
             <a
               href="https://mail.google.com/mail/?view=cm&fs=1&to=basirsyams26@gmail.com"
               target="_blank"
+              rel="noopener noreferrer"
             >
-              <Button variant="ghost" size="icon" className="w-8 h-8">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="w-8 h-8 text-muted-foreground hover:text-primary"
+              >
                 <Mail className="w-4 h-4" />
               </Button>
             </a>
           </div>
         </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-foreground"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          {isMobileMenuOpen ? (
+            <X className="w-5 h-5" />
+          ) : (
+            <Menu className="w-5 h-5" />
+          )}
+        </button>
       </nav>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-white/95 backdrop-blur-md border-b border-border">
+          <div className="container mx-auto px-6 py-4 flex flex-col gap-3">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2 text-left"
+              >
+                {item.label}
+              </button>
+            ))}
+            <div className="flex gap-2 pt-2 border-t border-border">
+              <a href="/assets/cv.pdf" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="sm" className="text-xs rounded-full">
+                  <Download className="w-3.5 h-3.5 mr-1.5" />
+                  Download CV
+                </Button>
+              </a>
+              <a href="/assets/BNSP.pdf" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="sm" className="text-xs rounded-full">
+                  <Download className="w-3.5 h-3.5 mr-1.5" />
+                  BNSP
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 };

@@ -18,121 +18,109 @@ const AboutSection = () => {
   };
 
   return (
-    <section id="about" className="py-20 bg-gradient-primary relative">
-      <div className="container mx-auto px-6">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-6 px-4 py-2 text-sm">
-            👋 Available for opportunities
-          </Badge>
-        </div>
+    <section id="about" className="min-h-screen flex items-center relative pt-20">
+      {/* Subtle background decoration */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50/50 to-white" />
+      <div className="absolute top-1/3 right-0 w-96 h-96 bg-primary/[0.03] rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 left-0 w-72 h-72 bg-blue-100/30 rounded-full blur-3xl" />
 
-        {/* Main Content */}
-        <div className="max-w-2xl mx-auto">
-          <div className="space-y-8 text-center">
-            {/* Profile Image */}
-            <div className="animate-fade-up">
-              <img
-                src="/assets/profile.jpg"
-                alt="Basir Arsy Syams"
-                className="w-40 h-40 rounded-full mx-auto shadow-lg object-cover"
-              />
-            </div>
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-3xl mx-auto text-center">
+          {/* Status Badge */}
+          <div className="mb-8 animate-fade-in">
+            <Badge
+              variant="outline"
+              className="px-4 py-1.5 text-xs font-medium tracking-wide uppercase border-primary/20 text-primary bg-primary/5"
+            >
+              Available for opportunities
+            </Badge>
+          </div>
 
-            {/* Title and Description */}
-            <div className="space-y-4">
-              <h2 className="text-4xl md:text-5xl font-bold">
-                Hi, I'm <span className="text-primary">Basir Arsy Syams</span>
-              </h2>
+          {/* Name & Title */}
+          <div className="space-y-6 animate-fade-up">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground text-balance">
+              Hi, I'm{" "}
+              <span className="text-primary">Basir Arsy Syams</span>
+            </h1>
 
-              <p className="text-muted-foreground leading-relaxed text-lg">
-                I am a fresh graduate with a background in Information
-                Technology and hold a Bachelor of Applied Computer Science
-                degree. I have experience in developing web-based systems. This
-                experience has honed my problem-solving abilities, programming
-                logic, and resilience.
-              </p>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+              I am a fresh graduate with a background in Information Technology
+              and hold a Bachelor of Applied Computer Science degree. I have
+              experience in developing web-based systems, which has honed my
+              problem-solving abilities, programming logic, and resilience.
+            </p>
 
-              <p className="text-muted-foreground leading-relaxed text-lg">
-                If you are looking for a fresh graduate with strong
-                problem-solving capabilities, solid logical thinking, and quick
-                adaptability to new technologies, I am ready to contribute to
-                your team.
-              </p>
-            </div>
+            <p className="text-base md:text-lg text-muted-foreground/80 leading-relaxed max-w-xl mx-auto">
+              If you are looking for someone with strong problem-solving
+              capabilities, solid logical thinking, and quick adaptability to new
+              technologies — I am ready to contribute to your team.
+            </p>
+          </div>
 
-            {/* Skills Badges */}
-            <div className="flex flex-wrap gap-2 justify-center">
-              <Badge variant="secondary">Laravel</Badge>
-              <Badge variant="secondary">React.js</Badge>
-              <Badge variant="secondary">Python</Badge>
-              <Badge variant="secondary">Vue.js</Badge>
-              <Badge variant="secondary">PHP</Badge>
-              <Badge variant="secondary">Javascript</Badge>
-              <Badge variant="secondary">Tailwind</Badge>
-              <Badge variant="secondary">Bootstrap</Badge>
-            </div>
-
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
-              <a
-                href="/assets/cv.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  size="lg"
-                  className="shadow-primary hover:shadow-glow transition-all duration-300"
+          {/* Skill Tags */}
+          <div className="flex flex-wrap gap-2 justify-center mt-10">
+            {["Laravel", "React.js", "Python", "Vue.js", "PHP", "JavaScript", "Tailwind", "Bootstrap"].map(
+              (skill) => (
+                <span
+                  key={skill}
+                  className="px-3 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-600 border border-slate-200/80"
                 >
-                  <Download className="w-5 h-5 mr-2" />
-                  Download CV
-                </Button>
-              </a>
+                  {skill}
+                </span>
+              )
+            )}
+          </div>
 
-              <a
-                href="/assets/BNSP.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-12">
+            <a href="/assets/cv.pdf" target="_blank" rel="noopener noreferrer">
+              <Button
+                size="lg"
+                className="rounded-full px-8 shadow-sm hover:shadow-md transition-all duration-300 bg-primary hover:bg-primary/90"
               >
-                <Button
-                  size="lg"
-                  className="shadow-primary hover:shadow-glow transition-all duration-300"
-                >
-                  <Download className="w-5 h-5 mr-2" />
-                  Download BNSP
-                </Button>
-              </a>
-            </div>
-
-            {/* Navigation Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <Download className="w-4 h-4 mr-2" />
+                Download CV
+              </Button>
+            </a>
+            <a href="/assets/BNSP.pdf" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="outline"
                 size="lg"
-                onClick={scrollToInternshipExperience}
-                className="hover:bg-primary/10 hover:border-primary transition-all duration-300"
+                className="rounded-full px-8 border-border hover:border-primary hover:text-primary transition-all duration-300"
               >
-                View Experience
-                <ArrowDown className="w-5 h-5 ml-2" />
+                <Download className="w-4 h-4 mr-2" />
+                BNSP Certificate
               </Button>
+            </a>
+          </div>
 
-              <Button
-                variant="outline"
-                size="lg"
-                onClick={scrollToProjects}
-                className="hover:bg-primary/10 hover:border-primary transition-all duration-300"
-              >
-                View Projects
-                <ArrowDown className="w-5 h-5 ml-2" />
-              </Button>
-            </div>
+          {/* Navigation Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-4">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={scrollToInternshipExperience}
+              className="text-muted-foreground hover:text-primary transition-all duration-300"
+            >
+              View Experience
+              <ArrowDown className="w-4 h-4 ml-1.5" />
+            </Button>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={scrollToProjects}
+              className="text-muted-foreground hover:text-primary transition-all duration-300"
+            >
+              View Projects
+              <ArrowDown className="w-4 h-4 ml-1.5" />
+            </Button>
           </div>
         </div>
+      </div>
 
-        {/* Animated Arrow Down */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ArrowDown className="w-6 h-6 text-muted-foreground" />
-        </div>
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <ArrowDown className="w-5 h-5 text-muted-foreground/50" />
       </div>
     </section>
   );
