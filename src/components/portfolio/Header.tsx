@@ -60,7 +60,7 @@ const Header = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-          <a href="/assets/cv.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="/assets/cv_basir.pdf" target="_blank" rel="noopener noreferrer">
             <Button
               variant="outline"
               size="sm"
@@ -147,7 +147,7 @@ const Header = () => {
               </button>
             ))}
             <div className="flex gap-2 pt-2 border-t border-border">
-              <a href="/assets/cv.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="/assets/cv_basir.pdf" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="sm" className="text-xs rounded-full">
                   <Download className="w-3.5 h-3.5 mr-1.5" />
                   Download CV

@@ -73,7 +73,7 @@ const AboutSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-12">
-            <a href="/assets/cv.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/assets/cv_basir.pdf" target="_blank" rel="noopener noreferrer">
               <Button
                 size="lg"
                 className="rounded-full px-8 shadow-sm hover:shadow-md transition-all duration-300 bg-primary hover:bg-primary/90"

@@ -148,7 +148,7 @@ const Index = () => {
 
           <div className="flex items-center gap-3 text-[12px] font-semibold tracking-[0.16em] uppercase font-mono text-slate-600">
             <a
-              href="/assets/cv.pdf"
+              href="/assets/cv_basir.pdf"
               target="_blank"
               rel="noreferrer"
               className="hover:text-blue-600 transition-colors"
@@ -259,7 +259,7 @@ const Index = () => {
 
           <div className="flex items-center gap-3 text-[11px] font-semibold tracking-[0.14em] uppercase font-mono text-slate-600">
             <a
-              href="/assets/cv.pdf"
+              href="/assets/cv_basir.pdf"
               target="_blank"
               rel="noreferrer"
               className="hover:text-blue-600 transition-colors"
