@@ -16,7 +16,7 @@ const Index = () => {
       company: "PT Sinergi Informatika Semen Indonesia",
       bgColor: "bg-gradient-to-br from-sky-200 to-blue-100 border-2 border-blue-200",
       image: "/assets/sisi/csa1.png",
-      images: ["/assets/sisi/csa1.png", "/assets/sisi/csa2.png", "/assets/sisi/csa3.png", "/assets/sisi/csa4.png"],
+      images: ["/assets/sisi/csa1.png", "/assets/sisi/csa2.png", "/assets/sisi/csa3.png", "/assets/sisi/csa4.png", "/assets/sisi/csa5.png", "/assets/sisi/csa6.png"],
     },
     {
       title: "First Aid Kit Consumption",
@@ -178,13 +178,11 @@ const Index = () => {
       {/* ========== HERO ========== */}
       <section className="pt-40 pb-32 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-[clamp(3rem,8vw,8rem)] font-bold leading-[0.9] tracking-tight text-neutral-800 uppercase">
-            BASIR ARSY
-            <br />
-            SYAMS
+          <h1 className="text-[clamp(3rem,8vw,4rem)] font-bold leading-[0.9] tracking-tight text-neutral-800 uppercase">
+            BASIR ARSY SYAMS
           </h1>
           <p className="mt-8 text-[13px] font-medium tracking-[0.3em] uppercase text-neutral-400 font-mono">
-            Software Engineer @ SISI &middot; CKB Group, Telkomsat.
+            Software & Data Engineer @ SISI &middot; CKB Group, Telkomsat.
           </p>
         </div>
       </section>

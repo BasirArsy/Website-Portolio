@@ -19,7 +19,7 @@ const ProjectsSection = () => {
       description:
         "This application enables teams from each module to view data that has been loaded into the datamart and identify data that requires correction. Through this system, original source data is separated from user-corrected data, ensuring data integrity and simplifying the audit process.",
       image: "/assets/sisi/csa1.png",
-      images: ["/assets/sisi/csa1.png", "/assets/sisi/csa2.png", "/assets/sisi/csa3.png", "/assets/sisi/csa4.png"],
+      images: ["/assets/sisi/csa1.png", "/assets/sisi/csa2.png", "/assets/sisi/csa3.png", "/assets/sisi/csa4.png", "/assets/sisi/csa5.png", "/assets/sisi/csa6.png"],
       technologies: ["Laravel", "React", "PostgreSQL"],
       company: "PT Sinergi Informatika Semen Indonesia",
       category: "Internship Project",
