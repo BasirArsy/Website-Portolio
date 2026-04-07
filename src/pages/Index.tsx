@@ -24,7 +24,7 @@ const Index = () => {
         "Enabling each branch to efficiently record and track daily first aid kit usage with a comprehensive tracking module.",
       tags: ["Laravel", "Vue.js", "MySQL"],
       technologies: ["Laravel", "Vue.js", "MySQL"],
-      company: "PT Cipta Krida Bahari (CKB Group)",
+      company: "PT Cipta Krida Bahari",
       bgColor: "bg-gradient-to-br from-emerald-200 to-teal-100 border-2 border-teal-200",
       image: "/assets/consumptionP3K/consumptionP3K1.png",
       images: [
@@ -38,7 +38,7 @@ const Index = () => {
         "Systematic inspection system to ensure operational readiness and proper maintenance tracking of generators.",
       tags: ["Laravel", "Vue.js", "MySQL"],
       technologies: ["Laravel", "Vue.js", "MySQL"],
-      company: "PT Cipta Krida Bahari (CKB Group)",
+      company: "PT Cipta Krida Bahari",
       bgColor: "bg-gradient-to-br from-violet-200 to-purple-100 border-2 border-purple-200",
       image: "/assets/inspectionGenset/inspectionGenset_1.png",
       images: [
@@ -54,7 +54,7 @@ const Index = () => {
         "Regular inspection module for fire safety compliance and hydrant condition monitoring across branches.",
       tags: ["Laravel", "Vue.js", "MySQL"],
       technologies: ["Laravel", "Vue.js", "MySQL"],
-      company: "PT Cipta Krida Bahari (CKB Group)",
+      company: "PT Cipta Krida Bahari",
       bgColor: "bg-gradient-to-br from-rose-200 to-pink-100 border-2 border-pink-200",
       image: "/assets/inspectionHydrant/inspectionHydrant_1.png",
       images: [
@@ -85,7 +85,7 @@ const Index = () => {
         "Monthly inspection module to monitor usage trends and track remaining first aid kit stock across branches.",
       tags: ["Laravel", "Vue.js", "MySQL"],
       technologies: ["Laravel", "Vue.js", "MySQL"],
-      company: "PT Cipta Krida Bahari (CKB Group)",
+      company: "PT Cipta Krida Bahari",
       bgColor: "bg-gradient-to-br from-cyan-200 to-sky-100 border-2 border-sky-200",
       image: "/assets/inspectionP3K/inspectionP3K_1.png",
       images: [
@@ -190,6 +190,9 @@ const Index = () => {
       {/* ========== PROJECTS / WORK ========== */}
       <section id="work" className="px-6 pb-32">
         <div className="max-w-7xl mx-auto">
+          <p className="mb-5 text-sm font-medium text-red-700">
+            *Please click on the project to view details*
+          </p>
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
               <div
@@ -298,11 +301,9 @@ const Index = () => {
             <div className="flex justify-between items-center px-8 py-6 border-b border-neutral-100">
               <div>
                 <h3 className="text-xl font-semibold text-neutral-900">
-                  {selectedProject.title}
+                  {selectedProject.company} ({selectedProject.title})
                 </h3>
-                <p className="text-sm text-neutral-400 mt-0.5">
-                  {selectedProject.company}
-                </p>
+            
               </div>
               <button
                 onClick={closeModal}
