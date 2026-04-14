@@ -195,7 +195,7 @@ const Index = () => {
           </p>
           <p className="mb-6 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
             Unfortunately, I am unable to include my Data Engineering
-            portfolio, as the projects involve confidential company data.
+            portfolio, as the projects involve confidential company data PT Sinergi Informatika Semen Indonesia.
           </p>
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
