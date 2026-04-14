@@ -190,8 +190,12 @@ const Index = () => {
       {/* ========== PROJECTS / WORK ========== */}
       <section id="work" className="px-6 pb-32">
         <div className="max-w-7xl mx-auto">
-          <p className="mb-5 text-sm font-medium text-red-700">
+          <p className="mb-3 text-sm font-medium text-red-700">
             *Please click on the project to view details*
+          </p>
+          <p className="mb-6 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
+            Unfortunately, I am unable to include my Data Engineering
+            portfolio, as the projects involve confidential company data.
           </p>
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
