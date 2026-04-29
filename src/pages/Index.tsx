@@ -263,14 +263,14 @@ const Index = () => {
           </p>
 
           <div className="flex items-center gap-3 text-[11px] font-semibold tracking-[0.14em] uppercase font-mono text-slate-600">
-            <a
+            {/* <a
               href="/assets/cv_basir.pdf"
               target="_blank"
               rel="noreferrer"
               className="hover:text-blue-600 transition-colors"
             >
               Resume
-            </a>
+            </a> */}
             <span className="text-slate-400">|</span>
             <a
               href="#work"
