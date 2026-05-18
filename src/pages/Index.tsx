@@ -15,7 +15,7 @@ const Index = () => {
       company: "PT Sinergi Informatika Semen Indonesia",
       bgColor: "bg-gradient-to-br from-sky-200 to-blue-100 border-2 border-blue-200",
       image: "/assets/sisi/csa1.png",
-      images: ["/assets/sisi/csa1.png", "/assets/sisi/csa2.png", "/assets/sisi/csa3.png", "/assets/sisi/csa4.png", "/assets/sisi/csa5.png", "/assets/sisi/csa6.png"],
+      images: ["/assets/sisi/csa1.png", "/assets/sisi/csa2.png", "/assets/sisi/csa3.png", "/assets/sisi/csa4.png", "/assets/sisi/csa5.png", "/assets/sisi/csa6.png", "/assets/sisi/csa7.png"],
     },
     {
       title: "First Aid Kit Consumption",
