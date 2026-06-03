@@ -9,7 +9,7 @@ const Index = () => {
   const projects = [
     {
       title: "Data Validation System",
-      description: "Designed and developed a web-based Data Validation System with two main module: Module validating SLA records that exceed standards by routing them to responsible teams for remarks and Module enabling high-volume raw data uploads into separate staging databases to maintain data integrity and traceability using Laravel, React, and PostgreSQL. Optimized the data ingestion process to handle hundreds of thousands of records in under one minute, ensuring efficient and scalable data processing.",
+      description: "Designed and developed a web-based Data Validation System with two main module: Module validating SLA records that exceed standards by routing them to responsible teams for remarks and Module enabling high-volume raw data uploads into separate staging databases", 
       tags: ["Laravel", "ReactJS", "Postgresql"],
       technologies: ["Laravel", "React", "PostgreSQL"],
       company: "PT Sinergi Informatika Semen Indonesia",
