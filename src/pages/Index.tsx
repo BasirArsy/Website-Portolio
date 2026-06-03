@@ -32,7 +32,7 @@ const Index = () => {
       ],
     },
     {
-      title: "Genset Inspection Module",
+      title: "Genset Inspection",
       description:
         "Systematic inspection system to ensure operational readiness and proper maintenance tracking of generators.",
       tags: ["Laravel", "Vue.js", "MySQL"],
