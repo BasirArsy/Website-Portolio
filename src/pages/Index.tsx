@@ -18,6 +18,22 @@ const Index = () => {
       images: ["/assets/sisi/csa1.png", "/assets/sisi/csa2.png", "/assets/sisi/csa3.png", "/assets/sisi/csa4.png", "/assets/sisi/csa6.png", "/assets/sisi/csa7.png","/assets/sisi/csa13.png", "/assets/sisi/csa8.png",  "/assets/sisi/csa9.png", "/assets/sisi/csa10.png", "/assets/sisi/csa11.png", "/assets/sisi/csa12.png"],
     },
     {
+      title: "Inventory Management System",
+      description:
+        "Designed and implemented 16 REST APIs for system integration. Participated in the development of workshop inventory module.",
+      tags: ["Laravel", "PHP", "MySQL"],
+      technologies: ["Laravel", "PHP", "MySQL"],
+      company: "PT Telkom Satelit Indonesia",
+      bgColor: "bg-gradient-to-br from-amber-200 to-orange-100 border-2 border-orange-200",
+      image: "/assets/magangTelkomsat/sertifikatTelkomsat.jpg",
+      images: [
+        "/assets/magangTelkomsat/magangTel1.png",
+        "/assets/magangTelkomsat/magangTel2.png",
+        "/assets/magangTelkomsat/magangTel3.png",        
+        "/assets/magangTelkomsat/sertifikatTelkomsat.jpg",
+      ],
+    },
+    {
       title: "First Aid Kit Consumption",
       description:
         "Enabling each branch to efficiently record and track daily first aid kit usage with a comprehensive tracking module.",
@@ -58,22 +74,6 @@ const Index = () => {
       images: [
         "/assets/inspectionHydrant/inspectionHydrant_1.png",
         "/assets/inspectionHydrant/inspectionHydrant_2.png",
-      ],
-    },
-    {
-      title: "Inventory Management System",
-      description:
-        "Designed and implemented 16 REST APIs for system integration. Participated in the development of workshop inventory module.",
-      tags: ["Laravel", "PHP", "MySQL"],
-      technologies: ["Laravel", "PHP", "MySQL"],
-      company: "PT Telkom Satelit Indonesia",
-      bgColor: "bg-gradient-to-br from-amber-200 to-orange-100 border-2 border-orange-200",
-      image: "/assets/magangTelkomsat/sertifikatTelkomsat.jpg",
-      images: [
-        "/assets/magangTelkomsat/magangTel1.png",
-        "/assets/magangTelkomsat/magangTel2.png",
-        "/assets/magangTelkomsat/magangTel3.png",        
-        "/assets/magangTelkomsat/sertifikatTelkomsat.jpg",
       ],
     },
     {
