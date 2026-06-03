@@ -44,7 +44,6 @@ const Index = () => {
         "/assets/inspectionGenset/inspectionGenset_1.png",
         "/assets/inspectionGenset/inspectionGenset_2.png",
         "/assets/inspectionGenset/inspectionGenset_3.png",
-        "/assets/inspectionGenset/inspectionGenset_4.png",
       ],
     },
     {
@@ -222,7 +221,7 @@ const Index = () => {
                 <div className="mt-5 flex items-start justify-between gap-4">
                   <div>
                     <h3 className="text-lg font-semibold text-neutral-900 group-hover:text-blue-600 transition-colors">
-                      {project.title}
+                      {project.title} ({project.company})
                     </h3>
                     <p className="mt-1.5 text-sm text-neutral-500 leading-relaxed max-w-md">
                       {project.description}
