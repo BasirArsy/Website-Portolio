@@ -71,11 +71,10 @@ const Index = () => {
       bgColor: "bg-gradient-to-br from-amber-200 to-orange-100 border-2 border-orange-200",
       image: "/assets/magangTelkomsat/sertifikatTelkomsat.jpg",
       images: [
+        "/assets/magangTelkomsat/magangTel1.png",
+        "/assets/magangTelkomsat/magangTel2.png",
+        "/assets/magangTelkomsat/magangTel3.png",        
         "/assets/magangTelkomsat/sertifikatTelkomsat.jpg",
-        "/assets/magangTelkomsat/magangTel3.png",
-        "/assets/magangTelkomsat/magangTel4.png",
-        "/assets/magangTelkomsat/magangTel5.png",
-        "/assets/magangTelkomsat/magangTel6.png",
       ],
     },
     {
@@ -191,10 +190,6 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <p className="mb-3 text-sm font-medium text-red-700">
             *Please click on the project to view details*
-          </p>
-          <p className="mb-6 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
-            Unfortunately, I am unable to include my Data Engineering
-            portfolio, as the projects involve confidential company data PT Sinergi Informatika Semen Indonesia.
           </p>
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
