@@ -54,7 +54,7 @@ const Index = () => {
       tags: ["Laravel", "Vue.js", "MySQL"],
       technologies: ["Laravel", "Vue.js", "MySQL"],
       company: "PT Cipta Krida Bahari",
-      bgColor: "bg-gradient-to-br from-violet-200 to-purple-100 border-2 border-purple-200",
+      bgColor: "bg-gradient-to-br from-emerald-200 to-teal-100 border-2 border-teal-200",
       image: "/assets/inspectionGenset/inspectionGenset_1.png",
       images: [
         "/assets/inspectionGenset/inspectionGenset_1.png",
@@ -69,7 +69,7 @@ const Index = () => {
       tags: ["Laravel", "Vue.js", "MySQL"],
       technologies: ["Laravel", "Vue.js", "MySQL"],
       company: "PT Cipta Krida Bahari",
-      bgColor: "bg-gradient-to-br from-rose-200 to-pink-100 border-2 border-pink-200",
+      bgColor: "bg-gradient-to-br from-emerald-200 to-teal-100 border-2 border-teal-200",
       image: "/assets/inspectionHydrant/inspectionHydrant_1.png",
       images: [
         "/assets/inspectionHydrant/inspectionHydrant_1.png",
@@ -83,7 +83,7 @@ const Index = () => {
       tags: ["Laravel", "Vue.js", "MySQL"],
       technologies: ["Laravel", "Vue.js", "MySQL"],
       company: "PT Cipta Krida Bahari",
-      bgColor: "bg-gradient-to-br from-cyan-200 to-sky-100 border-2 border-sky-200",
+      bgColor: "bg-gradient-to-br from-emerald-200 to-teal-100 border-2 border-teal-200",
       image: "/assets/inspectionP3K/inspectionP3K_1.png",
       images: [
         "/assets/inspectionP3K/inspectionP3K_1.png",
@@ -178,9 +178,6 @@ const Index = () => {
           <h1 className="text-[clamp(3rem,8vw,4rem)] font-bold leading-[0.9] tracking-tight text-neutral-800 uppercase">
             BASIR ARSY SYAMS
           </h1>
-          <p className="mt-8 text-[13px] font-medium tracking-[0.3em] uppercase text-neutral-400 font-mono">
-            Software & Data Engineer @ SISI &middot; CKB Group, Telkomsat.
-          </p>
         </div>
       </section>
 
