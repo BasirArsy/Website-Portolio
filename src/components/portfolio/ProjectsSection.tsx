@@ -55,8 +55,7 @@ const ProjectsSection = () => {
       ],
       technologies: ["React.js", "Single Page Application (SPA)", "JavaScript", "HTML5", "CSS3"],
       company: "PT. IDS Teknologi Indonesia",
-      category: "Contract / Project Based",
-      link: "https://drive.google.com/drive/folders/1CgnMck5_CqjKIliRm848xhw4VFsDAPRy?usp=drive_link",
+      
     },
     {
       title: "Data Validation System",
