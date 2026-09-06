@@ -4,6 +4,17 @@ import { Calendar, MapPin, Building } from "lucide-react";
 const ExperienceSection = () => {
   const experiences = [
     {
+      title: "Software Engineer",
+      company: "PT. IDS Teknologi Indonesia",
+      location: "Jakarta, Indonesia",
+      achievements: [
+        "Migrated enterprise frontend for client PT Kansai Paint Indonesia across 4 main modules, 20 business modules, and 49 workflow submodules from multi-page HTML, CSS, Vanilla JS architecture to a React.js Single Page Application (SPA).",
+        "Developed and integrated Request Management (Purchase Request, Reimbursement, Cash Advance, Settlement), Tracking Document (PR, AR Invoice, PO, Reimbursement, Outgoing Payments, PR-to-PO), and Approval Report modules.",
+        "Successfully completed development, testing, and deployment within 5 weeks.",
+      ],
+      technologies: ["React.js", "JavaScript", "HTML5", "CSS3", "SPA"],
+    },
+    {
       title: "Software Engineer & Data Engineer",
       company: "PT Sinergi Informatika Semen Indonesia",
       location: "Jakarta, Indonesia",

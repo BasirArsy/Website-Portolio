@@ -1,12 +1,77 @@
 import { useEffect, useState } from "react";
-import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+
+interface Project {
+  title: string;
+  description: string;
+  tags: string[];
+  technologies: string[];
+  company: string;
+  bgColor: string;
+  image: string;
+  images: string[];
+  role?: string;
+  period?: string;
+  documentation?: string;
+}
 
 const Index = () => {
-  const [selectedProject, setSelectedProject] = useState<null | (typeof projects)[number]>(null);
+  const [selectedProject, setSelectedProject] = useState<null | Project>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [projectSlideIndex, setProjectSlideIndex] = useState(0);
 
-  const projects = [
+  const projects: Project[] = [
+    {
+      title: "Enterprise Frontend Migration",
+      description:
+        "Migrated a enterprise frontend for client PT Kansai Paint Indonesia 4 main modules, 20 business modules, and 49 workflow submodules, including Request Management (Purchase Request, Reimbursement, Cash Advance, Settlement), Tracking Document (Purchase Request, AR Invoice, Purchase Order, Reimbursement, Outgoing Payments, PR-to-PO), and Approval Report (Purchase Order, AR Invoice, Outgoing Payment Reimbursement, Outgoing Payment Cash Advance, Outgoing Payment AP Invoice), from a HTML, CSS, Vanila Javascript multi-page architecture to a React js Single Page Application (SPA), successfully completing development, testing, and deployment within 5 weeks.",
+      tags: ["React.js", "SPA", "JavaScript"],
+      technologies: [
+        "React.js",
+        "Single Page Application (SPA)",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+      ],
+      company: "PT. IDS Teknologi Indonesia",
+      bgColor:
+        "bg-gradient-to-br from-indigo-200 to-violet-100 border-2 border-indigo-200",
+      image: "/assets/ids_documentation/dashboard.png",
+      images: [
+        "/assets/ids_documentation/dashboard.png",
+        "/assets/ids_documentation/login.png",
+        "/assets/ids_documentation/pending_task.png",
+        "/assets/ids_documentation/pr_1.png",
+        "/assets/ids_documentation/pr_2.png",
+        "/assets/ids_documentation/pr_3.png",
+        "/assets/ids_documentation/pr_4.png",
+        "/assets/ids_documentation/pr_5.png",
+        "/assets/ids_documentation/pr_6.png",
+        "/assets/ids_documentation/reim_1.png",
+        "/assets/ids_documentation/reim_2.png",
+        "/assets/ids_documentation/reim_3.png",
+        "/assets/ids_documentation/reim_4.png",
+        "/assets/ids_documentation/reim_5.png",
+        "/assets/ids_documentation/ca_1.png",
+        "/assets/ids_documentation/ca_2.png",
+        "/assets/ids_documentation/settlement_1.png",
+        "/assets/ids_documentation/settlement_2.png",
+        "/assets/ids_documentation/po_1.png",
+        "/assets/ids_documentation/po_2.png",
+        "/assets/ids_documentation/po_3.png",
+        "/assets/ids_documentation/po_4.png",
+        "/assets/ids_documentation/ar_1.png",
+        "/assets/ids_documentation/opca_1.png",
+        "/assets/ids_documentation/opca_2.png",
+        "/assets/ids_documentation/opreim_1.png",
+        "/assets/ids_documentation/tr_1.png",
+        "/assets/ids_documentation/tr_2.png",
+        "/assets/ids_documentation/mst_1.png",
+        "/assets/ids_documentation/mst_2.png",
+        "/assets/ids_documentation/mst_3.png",
+        "/assets/ids_documentation/mst_4.png",
+      ],
+    },
     {
       title: "Data Validation System",
       description: "Designed and developed a web-based Data Validation System with two main module: Module validating SLA records that exceed standards by routing them to responsible teams for remarks and Module enabling high-volume raw data uploads into separate staging databases", 
@@ -220,11 +285,30 @@ const Index = () => {
                     <h3 className="text-lg font-semibold text-neutral-900 group-hover:text-blue-600 transition-colors">
                       {project.title} ({project.company})
                     </h3>
+                    {(project.role || project.period) && (
+                      <p className="mt-1 text-xs font-mono text-neutral-500">
+                        {project.role} {project.role && project.period ? "•" : ""} {project.period}
+                      </p>
+                    )}
                     <p className="mt-1.5 text-sm text-neutral-500 leading-relaxed max-w-md">
                       {project.description}
                     </p>
+                    {project.documentation && (
+                      <div className="mt-2.5">
+                        <a
+                          href={project.documentation}
+                          target="_blank"
+                          rel="noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-700 transition-colors hover:underline"
+                        >
+                          <span>Documentation</span>
+                          <ExternalLink className="w-3 h-3" />
+                        </a>
+                      </div>
+                    )}
                   </div>
-                  <div className="flex items-center gap-2 flex-shrink-0 mt-1">
+                  <div className="flex flex-wrap items-center gap-2 flex-shrink-0 mt-1 max-w-[140px] justify-end">
                     {project.tags.map((tag, i) => (
                       <span
                         key={i}
@@ -297,14 +381,33 @@ const Index = () => {
                 <h3 className="text-xl font-semibold text-neutral-900">
                   {selectedProject.company} ({selectedProject.title})
                 </h3>
-            
+                {(selectedProject.role || selectedProject.period) && (
+                  <p className="text-xs text-neutral-500 font-mono mt-1">
+                    {selectedProject.role}
+                    {selectedProject.role && selectedProject.period ? " • " : ""}
+                    {selectedProject.period}
+                  </p>
+                )}
               </div>
-              <button
-                onClick={closeModal}
-                className="w-9 h-9 rounded-full bg-neutral-100 hover:bg-neutral-200 flex items-center justify-center transition-colors"
-              >
-                <X className="w-4 h-4 text-neutral-600" />
-              </button>
+              <div className="flex items-center gap-3">
+                {selectedProject.documentation && (
+                  <a
+                    href={selectedProject.documentation}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-blue-600 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors border border-blue-200"
+                  >
+                    <ExternalLink className="w-3.5 h-3.5" />
+                    <span>Documentation</span>
+                  </a>
+                )}
+                <button
+                  onClick={closeModal}
+                  className="w-9 h-9 rounded-full bg-neutral-100 hover:bg-neutral-200 flex items-center justify-center transition-colors"
+                >
+                  <X className="w-4 h-4 text-neutral-600" />
+                </button>
+              </div>
             </div>
 
             {/* Image Gallery */}
@@ -342,15 +445,28 @@ const Index = () => {
               <p className="text-sm text-neutral-500 leading-relaxed mb-4">
                 {selectedProject.description}
               </p>
-              <div className="flex flex-wrap gap-2">
-                {selectedProject.technologies.map((tech, i) => (
-                  <span
-                    key={i}
-                    className="text-[10px] font-mono font-medium text-neutral-500 border border-neutral-200 rounded-full px-2.5 py-0.5"
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <div className="flex flex-wrap gap-2">
+                  {selectedProject.technologies.map((tech, i) => (
+                    <span
+                      key={i}
+                      className="text-[10px] font-mono font-medium text-neutral-500 border border-neutral-200 rounded-full px-2.5 py-0.5"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                {selectedProject.documentation && (
+                  <a
+                    href={selectedProject.documentation}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-700 hover:underline"
                   >
-                    {tech}
-                  </span>
-                ))}
+                    <span>View Full Documentation (Google Drive)</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                )}
               </div>
             </div>
 
