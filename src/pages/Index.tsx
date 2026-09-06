@@ -38,8 +38,8 @@ const Index = () => {
         "bg-gradient-to-br from-indigo-200 to-violet-100 border-2 border-indigo-200",
       image: "/assets/ids_documentation/dashboard.png",
       images: [
-        "/assets/ids_documentation/dashboard.png",
         "/assets/ids_documentation/login.png",
+        "/assets/ids_documentation/dashboard.png",
         "/assets/ids_documentation/pending_task.png",
         "/assets/ids_documentation/pr_1.png",
         "/assets/ids_documentation/pr_2.png",
