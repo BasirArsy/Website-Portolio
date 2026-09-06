@@ -20,8 +20,8 @@ const ProjectsSection = () => {
         "Migrated a enterprise frontend for client PT Kansai Paint Indonesia 4 main modules, 20 business modules, and 49 workflow submodules, including Request Management (Purchase Request, Reimbursement, Cash Advance, Settlement), Tracking Document (Purchase Request, AR Invoice, Purchase Order, Reimbursement, Outgoing Payments, PR-to-PO), and Approval Report (Purchase Order, AR Invoice, Outgoing Payment Reimbursement, Outgoing Payment Cash Advance, Outgoing Payment AP Invoice), from a HTML, CSS, Vanila Javascript multi-page architecture to a React js Single Page Application (SPA), successfully completing development, testing, and deployment within 5 weeks.",
       image: "/assets/ids_documentation/dashboard.png",
       images: [
-        "/assets/ids_documentation/dashboard.png",
         "/assets/ids_documentation/login.png",
+        "/assets/ids_documentation/dashboard.png",
         "/assets/ids_documentation/pending_task.png",
         "/assets/ids_documentation/pr_1.png",
         "/assets/ids_documentation/pr_2.png",
